@@ -6,6 +6,7 @@
 html {
     height: 100%;
 }
+
 /* 
 #grad1 {
     background-color: #9C27B0;
@@ -41,8 +42,6 @@ html {
     width: 100%;
     margin: 0;
     padding-bottom: 20px;
-
-    /*stacking fieldsets above each other*/
     position: relative;
 }
 
@@ -53,7 +52,7 @@ html {
 
 #msform fieldset .form-card {
     text-align: left;
-    color: #9E9E9E;
+    color: #110e0e;
 }
 
 #msform input,
@@ -129,7 +128,7 @@ select.list-dt {
 }
 
 select.list-dt:focus {
-    border-bottom: 2px solid skyblue;
+    border-bottom: 1px solid skyblue;
 }
 
 /*The background card*/
@@ -142,9 +141,9 @@ select.list-dt:focus {
 
 /*FieldSet headings*/
 .fs-title {
-    font-size: 25px;
+    font-size: 20px;
     color: #2C3E50;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-weight: bold;
     text-align: left;
 }
