@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>Vendor Portal</title>
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" /> -->
+
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/styleDup.css" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/miniLogo.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap4.min.css">
+
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 5px;
+            transition: 0.3s;
+            font-size: 17px;
+            /* border-left: 6px solid green; */
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-scroller">
+        <%- include('includes/navbar'); %>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_sidebar.html -->
+                <%- include('includes/sideBar'); %>
+
+                    <div class="main-panel">
+
+
+
+                        <div class="content-wrapper">
+
+
+                            <div class="container">
+                                <div class="tab">
+                                    <button class="tablinks" onclick="openCity(event, 'Personal Information')"
+                                        id="defaultOpen"> Personal
+                                        Information</button>
+                                    <button class="tablinks"
+                                        onclick="openCity(event, 'classification')">Classification</button>
+                                    <button class="tablinks" onclick="openCity(event, 'contact')"> Contact</button>
+                                    <button class="tablinks" onclick="openCity(event, 'address')"> Address</button>
+                                </div>
+
+                                <div id="Personal Information" class="tabcontent">
+                                    <label>First Name : Priti </label><br><br>
+                                    <label>Last Name : Sharma</label> <br><br>
+                                    <label>Company Name : Streamssolutions pvt. ltd</label><br><br>
+                                    <label>Category : Contract</label><br><br>
+                                    <label>Type : Individual</label><br><br>
+                                </div>
+
+                                <div id="classification" class="tabcontent">
+
+                                    <label>Subsidiary : USA </label><br><br>
+                                    <label>Trem's : Net30</label><br><br>
+                                </div>
+
+                                <div id="contact" class="tabcontent">
+
+                                    <label>Email : priti@gmail.com</label><br><br>
+                                    <label>Contact : 235789768</label><br><br>
+                                </div>
+                                <div id="address" class="tabcontent">
+
+                                    <label>Steert1address : Badshahpur </label><br><br>
+                                    <label>City Name : Jaunpur</label><br><br>
+                                    <label>Pincode : 220022</label><br><br>
+                                    <label>State : Uttar Pradesh</label><br><br>
+                                    <label>Country : India</label><br><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <%- include('includes/footer'); %>
+                    </div>
+            </div>
+
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- End custom js for this page -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap4.min.js"></script>
+
+</body>
+
+</html>

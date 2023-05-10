@@ -1,0 +1,121 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="/viewEmpDetail" class="nav-link">
+        <div class="nav-profile-image">
+          <img src="assets/images/logouser.png" alt="profile">
+          <span class="login-status online"></span>
+          <!--change to offline or busy as needed-->
+        </div>
+        <div class="nav-profile-text d-flex flex-column">
+          <span class="font-weight-bold mb-2">
+            TEST USER
+          </span>
+
+        </div>
+        <!-- <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i> -->
+      </a>
+    </li>
+
+
+    <% if(role==='manager' ) { %>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/manDash">
+          <i class="mdi mdi-home menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+
+        </a>
+      </li>
+
+
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="true" aria-controls="ui-basic2">
+          <i class="mdi mdi-account-multiple menu-icon"></i>
+          <span class="menu-title">Vendors</span>
+          <i class="menu-arrow"></i>
+        </a>
+
+        <div class="collapse show" id="ui-basic2">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item "> <a class="nav-link" href="/form1" id="add-vendor-link">Add New Vendor</a>
+             
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="">List of Vendors</a></li>
+            <li class="nav-item "> <a class="nav-link" href="">Approve Vendor</a></li>
+            <li class="nav-item "> <a class="nav-link" href="">Update Details</a></li>
+
+          </ul>
+        </div>
+      </li>
+
+      <% } else { %>
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/exeDash">
+            <i class="mdi mdi-home menu-icon"></i>
+            <span class="menu-title">Dashboard</span>
+
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="true"
+            aria-controls="ui-basic2">
+            <i class="mdi mdi-account-multiple menu-icon"></i>
+            <span class="menu-title">Vendors</span>
+            <i class="menu-arrow"></i>
+          </a>
+
+          <div class="collapse show" id="ui-basic2">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item "> <a class="nav-link" href="/form1">Add New Vendor</a></li>
+              <li class="nav-item "> <a class="nav-link" href="">List of Vendors</a></li>
+              <li class="nav-item "> <a class="nav-link" href="">Update Details</a></li>
+            </ul>
+          </div>
+        </li>
+        <% } %>
+
+
+
+
+
+
+          <!-- <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="true" aria-controls="ui-basic3">
+          <i class="mdi mdi-file-document-box menu-icon"></i>
+          <span class="menu-title">Reports</span>
+          <i class="menu-arrow"></i>
+
+         
+        </a>
+        <div class="collapse show" id="ui-basic3">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="/listLeaves">Leave Report</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/listleaveBalance">Leave Balance Report</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/listOfAllEmpAttendance">Attendance Report</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/listOflateComing">Tardy Report</a></li>      
+          </ul>
+        </div>
+      </li> -->
+
+
+          <!-- <li class="nav-item">
+        <a class="nav-link" href="/addDepartment">
+          <span class="menu-title">Add Department</span>
+        </a>
+      </li> -->
+          <!-- <li class="nav-item">
+        <a class="nav-link" href="/uploadLeaveBalance">
+          <span class="menu-title">Upload Leave Balance</span>
+        </a>
+      </li> -->
+
+  </ul>
+</nav>
