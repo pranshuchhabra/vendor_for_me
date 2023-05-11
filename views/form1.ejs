@@ -177,13 +177,14 @@
                                                                     <label for="cont1">Contact</label>
                                                                     <input type="text" id="cont1" placeholder="" />
 
+                                                                    <div id="alternate-inputs"></div>
+
                                                                     <button type="button" id="add-btn">Add more</button>
-                                                                    <br>
-                                                                    <br>
+
+
+
 
                                                                 </div>
-
-
 
 
                                                                 <!-- <div class="radio-group">
@@ -269,6 +270,39 @@
 
                                                                 <label for="pincode">Pincode</label>
                                                                 <input type="text" id="pincode" placeholder="" />
+
+
+
+
+
+                                                                <input type="checkbox" id="sameAsBilling"
+                                                                    name="sameAsBilling">
+                                                                <label for="sameAsBilling">Billing address same as
+                                                                    shipping address</label>
+
+
+                                                                <!-- <h2>Shipping address</h2> -->
+
+                                                                <label for="shippingName">Name:</label>
+                                                                <input type="text" id="shippingName"
+                                                                    name="shippingName"><br>
+
+                                                                <label for="shippingAddress">Address:</label>
+                                                                <input type="text" id="shippingAddress"
+                                                                    name="shippingAddress"><br>
+
+                                                                <label for="shippingCity">City:</label>
+                                                                <input type="text" id="shippingCity"
+                                                                    name="shippingCity"><br>
+
+                                                                <label for="shippingState">State:</label>
+                                                                <input type="text" id="shippingState"
+                                                                    name="shippingState"><br>
+
+                                                                <label for="shippingZip">Zip:</label>
+                                                                <input type="text" id="shippingZip"
+                                                                    name="shippingZip"><br>
+
 
 
                                                                 <!-- <div class="row justify-content-center">
@@ -390,26 +424,84 @@
 
 
 
+            // var counter = 1;
+            // $("#add-btn").click(function () {
+
+            //     if (counter <= 2) {
+
+            //         $("#input").append('<div class="re_input"><label for="alt-email' + counter + '">Alternate-Email</label><input type="text" id="alt-email' + counter + '" placeholder="" /><label for="alt-contact' + counter + '">Alternate-Contact</label><input type="text" id="alt-contact' + counter + '" placeholder="" /><button type="button" class="inputRemove">Remove</button></div>');
+            //         counter++;
+            //     }
+            // });
+
+            // $('body').on('click', '.inputRemove', function () {
+
+            //     $(this).parent('div.re_input').remove();
+            //     counter--;
+
+            // });
+
+
+
             var count = 1;
+
             $("#add-btn").click(function () {
-
-                if (count <= 2) {
-
-                    $("#input").append('<div class="re_input"><label for="alt-email">Alternate-Email</label><input type="text" id="alt-email" placeholder="" /><label for="alt-contact">Alternate-Contact</label><input type="text" id="alt-contact" placeholder="" /><button type="button" class="inputRemove">Remove</button></div>');
+                if (count < 3) {
+                    var newInput = '<div class="re_input">' +
+                        '<label for="alt-email' + count + '">Alternate-Email</label>' +
+                        '<input type="text" id="alt-email' + count + '" placeholder="" />' +
+                        '<label for="alt-contact' + count + '">Alternate-Contact</label>' +
+                        '<input type="text" id="alt-contact' + count + '" placeholder="" />' +
+                        '<button type="button" class="inputRemove">Remove</button>' +
+                        '<br></br>' +
+                        '</div>';
+                    $("#alternate-inputs").append(newInput);
                     count++;
                 }
             });
 
             $('body').on('click', '.inputRemove', function () {
-
-                $(this).parent('div.re_input').remove();
+                $(this).parent('.re_input').remove();
                 count--;
-
             });
-
-
-
         });
+
+
+
+        const stadd1 = document.getElementById('stadd1');
+        const billingAddress = document.getElementById('billingAddress');
+        const billingCity = document.getElementById('billingCity');
+        const billingState = document.getElementById('billingState');
+        const billingZip = document.getElementById('billingZip');
+
+        const shippingName = document.getElementById('shippingName');
+        const shippingAddress = document.getElementById('shippingAddress');
+        const shippingCity = document.getElementById('shippingCity');
+        const shippingState = document.getElementById('shippingState');
+        const shippingZip = document.getElementById('shippingZip');
+
+        const sameAsBilling = document.getElementById('sameAsBilling');
+
+        sameAsBilling.addEventListener('click', () => {
+            if (sameAsBilling.checked) {
+                shippingName.value = stadd1.value;
+                // shippingAddress.value = billingAddress.value;
+                // shippingCity.value = billingCity.value;
+                // shippingState.value = billingState.value;
+                // shippingZip.value = billingZip.value;
+            } else {
+                shippingName.value = '';
+                shippingAddress.value = '';
+                shippingCity.value = '';
+                shippingState.value = '';
+                shippingZip.value = '';
+            }
+        });
+
+
+
+
+
 
 
 
