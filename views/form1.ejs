@@ -29,7 +29,7 @@
 
 
 
-
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/form1.css">
 </head>
 
@@ -46,91 +46,147 @@
                         <div class="content-wrapper">
 
                             <!-- MultiStep Form -->
-                            <!-- <div class="container-fluid" id="grad1"> -->
-                            <div class="row justify-content-center mt-0">
-                                <div class="col-lg-9 text-center p-0 mt-3 mb-2">
-                                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                                        <!-- <h2><strong>Sign Up Your User Account</strong></h2> -->
-                                        <!-- <p>Fill all form field to go to next step</p> -->
-                                        <div class="row">
-                                            <div class="col-md-12 mx-0">
-                                                <form id="msform">
-                                                    <!-- progressbar -->
-                                                    <ul id="progressbar">
-                                                        <li class="active" id="personal"><strong>Personal
-                                                                Information</strong>
-                                                        </li>
-                                                        <li id="classification"><strong>Classification</strong></li>
-                                                        <li id="contact"><strong>Contact Information</strong></li>
-                                                        <li id="address"><strong>Address</strong></li>
-                                                    </ul>
-                                                    <!-- fieldsets -->
-                                                    <fieldset>
-                                                        <div class="form-card">
-                                                            <h2 class="fs-title">Personal Information</h2>
 
-                                                            <label for="fname">First Name</label>
-                                                            <input type="text" id="fname" placeholder="" />
-
-                                                            <label for="lname">Last Name</label>
-                                                            <input type="text" id="lname" placeholder="" />
-
-                                                            <label for="coname">Company Name</label>
-                                                            <input type="text" id="coname" placeholder="" />
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9 text-center p-0 mt-3 mb-2">
+                                        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                                            <!-- <h2><strong>Sign Up Your User Account</strong></h2> -->
+                                            <!-- <p>Fill all form field to go to next step</p> -->
+                                            <div class="row">
+                                                <div class="col-md-12 mx-0">
+                                                    <form id="msform">
+                                                        <!-- progressbar -->
+                                                        <ul id="progressbar">
+                                                            <li class="active" id="personal"><strong>Personal
+                                                                    Information</strong>
+                                                            </li>
+                                                            <li id="classification"><strong>Classification</strong></li>
+                                                            <li id="contact"><strong>Contact Information</strong></li>
+                                                            <li id="address"><strong>Address</strong></li>
+                                                        </ul>
+                                                        <!-- fieldsets -->
+                                                        <fieldset>
+                                                            <div class="form-card">
+                                                                <h2 class="fs-title">Personal Information</h2>
 
 
-                                                            <select class="list-dt">
-                                                                <option selected>Select your Category</option>
-                                                                <option>Contract</option>
-                                                                <option>Lease</option>
-                                                                <option>Supplier</option>
-
-                                                            </select>
-
-                                                        </div>
-                                                        <input type="button" name="next" class="next action-button"
-                                                            value="Next" />
-                                                    </fieldset>
-                                                    <fieldset>
-                                                        <div class="form-card">
-                                                            <h2 class="fs-title">Classification</h2>
-
-                                                            <select class="list-dt">
-                                                                <option selected>Select your Subsidiary</option>
-                                                                <option>India</option>
-                                                                <option>USA</option>
 
 
-                                                            </select>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <label for="fname">First Name</label>
+                                                                        <input type="text" id="fname" placeholder="" />
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <label for="lname">Last Name</label>
+                                                                        <input type="text" id="lname" placeholder="" />
+                                                                    </div>
+                                                                </div>
 
-                                                            <br>
-                                                            <br>
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <label for="category">Category</label>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <select class="list-dt">
+                                                                            <option selected>Select</option>
+                                                                            <option>Contract</option>
+                                                                            <option>Lease</option>
+                                                                            <option>Supplier</option>
 
-                                                            <select class="list-dt">
-                                                                <option selected>Select your Type</option>
-                                                                <option>NET30</option>
-                                                                <option>NET60</option>
-                                                                <option>NET90</option>
+                                                                        </select>
 
-                                                            </select>
-                                                        </div>
-                                                        <input type="button" name="previous"
-                                                            class="previous action-button-previous" value="Previous" />
-                                                        <input type="button" name="next" class="next action-button"
-                                                            value="Next" />
-                                                    </fieldset>
-                                                    <fieldset>
-                                                        <div class="form-card">
-                                                            <h2 class="fs-title">Contact Information</h2>
+                                                                    </div>
 
-                                                            <label for="email">Email</label>
-                                                            <input type="text" id="email" placeholder="" />
+                                                                    <div class="col-2">
+                                                                        <label for="type">Type</label>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <select class="list-dt">
+                                                                            <option selected>Select</option>
+                                                                            <option>Individual</option>
+                                                                            <option>Company</option>
+                                                                        </select>
 
-                                                            <label for="cont1">Contact</label>
-                                                            <input type="text" id="cont1" placeholder="" />
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <br>
+
+                                                                <label for="coname">Company Name</label>
+                                                                <input type="text" id="coname" placeholder="" />
 
 
-                                                            <!-- <div class="radio-group">
+
+                                                            </div>
+                                                            <input type="button" name="next" class="next action-button"
+                                                                value="Next" />
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <div class="form-card">
+                                                                <h2 class="fs-title">Classification</h2>
+
+
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <label for="subsidiary">Subsidiary</label>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <select class="list-dt">
+                                                                            <option selected>Select Subsidiary</option>
+                                                                            <option>India</option>
+                                                                            <option>USA</option>
+
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="col-2">
+                                                                        <label for="terms">Terms</label>
+
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <select class="list-dt">
+                                                                            <option selected>Select Terms</option>
+                                                                            <option>NET30</option>
+                                                                            <option>NET60</option>
+                                                                            <option>NET90</option>
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <input type="button" name="previous"
+                                                                class="previous action-button-previous"
+                                                                value="Previous" />
+                                                            <input type="button" name="next" class="next action-button"
+                                                                value="Next" />
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <div class="form-card">
+                                                                <h2 class="fs-title">Contact Information</h2>
+
+                                                                <div id="input">
+
+                                                                    <label for="email">Email</label>
+                                                                    <input type="text" id="email" placeholder="" />
+
+                                                                    <label for="cont1">Contact</label>
+                                                                    <input type="text" id="cont1" placeholder="" />
+
+                                                                    <button type="button" id="add-btn">Add more</button>
+                                                                    <br>
+                                                                    <br>
+
+                                                                </div>
+
+
+
+
+                                                                <!-- <div class="radio-group">
                                                                 <div class='radio' data-value="credit"><img
                                                                         src="https://i.imgur.com/XzOzVHZ.jpg"
                                                                         width="200px" height="100px"></div>
@@ -138,15 +194,15 @@
                                                                         src="https://i.imgur.com/jXjwZlj.jpg"
                                                                         width="200px" height="100px"></div>
                                                                 <br>
-                                                            </div> -->
+                                                                </div> -->
 
 
 
 
 
-                                                            <!-- <label class="pay">Card Holder Name*</label>
-                                                            <input type="text" name="holdername" placeholder="" />
-                                                            <div class="row">
+                                                                <!-- <label class="pay">Card Holder Name*</label>
+                                                              <input type="text" name="holdername" placeholder="" />
+                                                              <div class="row">
                                                                 <div class="col-9">
                                                                     <label class="pay">Card Number*</label>
                                                                     <input type="text" name="cardno" placeholder="" />
@@ -156,8 +212,8 @@
                                                                     <input type="password" name="cvcpwd"
                                                                         placeholder="***" />
                                                                 </div>
-                                                            </div>
-                                                            <div class="row">
+                                                              </div>
+                                                              <div class="row">
                                                                 <div class="col-3">
                                                                     <label class="pay">Expiry Date*</label>
                                                                 </div>
@@ -181,41 +237,66 @@
                                                                         <option selected>Year</option>
                                                                     </select> 
                                                                 </div>
-                                                            </div>  -->
+                                                              </div>  -->
 
 
 
-                                                        </div>
-                                                        <input type="button" name="previous"
-                                                            class="previous action-button-previous" value="Previous" />
-                                                        <input type="button" name="next" class="next action-button"
-                                                            value="Next" />
-                                                    </fieldset>
-                                                    <fieldset>
-                                                        <div class="form-card">
-                                                            <h2 class="fs-title text-center">Success !</h2>
-                                                            <br><br>
-                                                            <div class="row justify-content-center">
+                                                            </div>
+                                                            <input type="button" name="previous"
+                                                                class="previous action-button-previous"
+                                                                value="Previous" />
+                                                            <input type="button" name="next" class="next action-button"
+                                                                value="Next" />
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <div class="form-card">
+                                                                <h2 class="fs-title">Address</h2>
+
+                                                                <label for="stadd1">Street Address1</label>
+                                                                <input type="text" id="stadd1" placeholder="" />
+
+                                                                <label for="stadd2">Street Address2</label>
+                                                                <input type="text" id="stadd2" placeholder="" />
+
+                                                                <label for="country">Country</label>
+                                                                <input type="text" id="country" placeholder="" />
+
+                                                                <label for="state">State</label>
+                                                                <input type="text" id="state" placeholder="" />
+
+                                                                <label for="city">City</label>
+                                                                <input type="text" id="city" placeholder="" />
+
+                                                                <label for="pincode">Pincode</label>
+                                                                <input type="text" id="pincode" placeholder="" />
+
+
+                                                                <!-- <div class="row justify-content-center">
                                                                 <div class="col-3">
                                                                     <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
                                                                         class="fit-image">
                                                                 </div>
-                                                            </div>
-                                                            <br><br>
-                                                            <div class="row justify-content-center">
+                                                               </div>
+                                                               <br><br>
+                                                              <div class="row justify-content-center">
                                                                 <div class="col-7 text-center">
                                                                     <h5>You Have Successfully Signed Up</h5>
                                                                 </div>
+                                                                 </div>  -->
                                                             </div>
-                                                        </div>
-                                                    </fieldset>
-                                                </form>
+                                                            <input type="button" name="previous"
+                                                                class="previous action-button-previous"
+                                                                value="Previous" />
+                                                            <input type="button" name="Submit"
+                                                                class="next action-button" value="Submit" />
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- </div> -->
 
 
 
@@ -290,6 +371,10 @@
                 });
             });
 
+
+
+
+
             $('.radio-group .radio').click(function () {
                 $(this).parent().find('.radio').removeClass('selected');
                 $(this).addClass('selected');
@@ -299,7 +384,36 @@
                 return false;
             })
 
+            // });
+
+
+
+
+
+            var count = 1;
+            $("#add-btn").click(function () {
+
+                if (count <= 2) {
+
+                    $("#input").append('<div class="re_input"><label for="alt-email">Alternate-Email</label><input type="text" id="alt-email" placeholder="" /><label for="alt-contact">Alternate-Contact</label><input type="text" id="alt-contact" placeholder="" /><button type="button" class="inputRemove">Remove</button></div>');
+                    count++;
+                }
+            });
+
+            $('body').on('click', '.inputRemove', function () {
+
+                $(this).parent('div.re_input').remove();
+                count--;
+
+            });
+
+
+
         });
+
+
+
+
     </script>
 
 

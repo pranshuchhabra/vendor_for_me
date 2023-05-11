@@ -26,50 +26,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap4.min.css">
 
 
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 10px 5px;
-            transition: 0.3s;
-            font-size: 17px;
-            /* border-left: 6px solid green; */
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-
-        }
-    </style>
 </head>
 
 <body>
@@ -87,46 +43,170 @@
 
                         <div class="content-wrapper">
 
-
+                            <div class="page-header px-4">
+                                <h1 class="page-title"> View Details</h1>
+                            </div>
                             <div class="container">
-                                <div class="tab">
-                                    <button class="tablinks" onclick="openCity(event, 'Personal Information')"
-                                        id="defaultOpen"> Personal
-                                        Information</button>
-                                    <button class="tablinks"
-                                        onclick="openCity(event, 'classification')">Classification</button>
-                                    <button class="tablinks" onclick="openCity(event, 'contact')"> Contact</button>
-                                    <button class="tablinks" onclick="openCity(event, 'address')"> Address</button>
-                                </div>
 
-                                <div id="Personal Information" class="tabcontent">
-                                    <label>First Name : Priti </label><br><br>
-                                    <label>Last Name : Sharma</label> <br><br>
-                                    <label>Company Name : Streamssolutions pvt. ltd</label><br><br>
-                                    <label>Category : Contract</label><br><br>
-                                    <label>Type : Individual</label><br><br>
-                                </div>
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-collapseOne">
+                                                Personal Information
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                            aria-pledby="panelsStayOpen-headingOne">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt-2">
+                                                            <p><b> First Name :</b> Priti </p>
 
-                                <div id="classification" class="tabcontent">
+                                                        </div>
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt-2">
+                                                            <p><b>Last Name :</b> Sharma</p>
+                                                        </div>
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt-2">
+                                                            <p><b>Company Name : </b> Streamssolutions
+                                                                pvt.ltd</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
 
-                                    <label>Subsidiary : USA </label><br><br>
-                                    <label>Trem's : Net30</label><br><br>
-                                </div>
+                                                        <div class="  col-lg col-md-4 col-sm-12 mt-2">
+                                                            <p><b>Category : </b>Supplier</p>
+                                                        </div>
+                                                        <div class="  col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b> Type : </b>Company</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                Classification
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                            aria-pledby="panelsStayOpen-headingTwo">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Subsidiary :</b> India </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Term's :</b> Net30 </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                Contact Details
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                            aria-pledby="panelsStayOpen-headingThree">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="  col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Email : </b>priti@gmail.com</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="col-lg  col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Contact : </b>9087654432 </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapsefour">
+                                                Address
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse"
+                                            aria-pledby="panelsStayOpen-headingfour">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h6>Shipping Address</h6>
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Street1add : </b>Sathariya</p>
+                                                        </div>
+                                                        <div class=" col-lg  col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Street2add : </b>Jaunpur</p>
+                                                        </div>
+                                                        <div class="  col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>City : </b>Gurgaon</p>
+                                                        </div>
+                                                        <div class=" col-lg  col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>State : </b>Uttar Pradesh</p>
+                                                        </div>
+                                                        <div class=" col-lg  col-md-4 col-sm-12 mt- 2 ">
+                                                            <p><b>Pincode : </b>222202</p>
 
-                                <div id="contact" class="tabcontent">
+                                                        </div>
+                                                        <div class=" col-lg  col-md-4 col-sm-12 mt- 2 ">
+                                                            <p><b>Country :</b> India</p>
 
-                                    <label>Email : priti@gmail.com</label><br><br>
-                                    <label>Contact : 235789768</label><br><br>
-                                </div>
-                                <div id="address" class="tabcontent">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 ">
+                                                        <h6>Billing Address</h6>
+                                                        <div class="col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Street1add : </b>Sathariya</p>
+                                                        </div>
+                                                        <div class="col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>Street2add : </b>Jaunpur</p>
+                                                        </div>
+                                                        <div class=" col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>City :</b> Gurgaon</p>
+                                                        </div>
+                                                        <div class="col-lg col-md-4 col-sm-12 mt- 2">
+                                                            <p><b>State : </b>Uttar Pradesh</p>
+                                                        </div>
+                                                        <div class="col-lg col-md-4 col-sm-12 mt- 2 ">
+                                                            <p><b>Pincode :</b> 222202</p>
 
-                                    <label>Steert1address : Badshahpur </label><br><br>
-                                    <label>City Name : Jaunpur</label><br><br>
-                                    <label>Pincode : 220022</label><br><br>
-                                    <label>State : Uttar Pradesh</label><br><br>
-                                    <label>Country : India</label><br><br>
+                                                        </div>
+                                                        <div class="col-lg col-md-4 col-sm-12 mt- 2 ">
+                                                            <p><b>Country : </b>India</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+
                         </div>
 
                         <%- include('includes/footer'); %>
@@ -136,22 +216,7 @@
     </div>
 
     <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
 
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
     </script>
 
 

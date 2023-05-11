@@ -29,8 +29,6 @@ html {
     box-sizing: border-box;
     width: 94%;
     margin: 0 3% 20px 3%;
-
-    /*stacking fieldsets above each other*/
     position: relative;
 }
 
@@ -57,9 +55,10 @@ html {
 
 #msform input,
 #msform textarea {
-    padding: 0px 8px 4px 8px;
-    border: none;
-    border-bottom: 1px solid #ccc;
+    /* padding: 0px 8px 4px 8px; */
+    padding: 8px 15px 8px 15px;
+    border: 2px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     border-radius: 0px;
     margin-bottom: 25px;
     margin-top: 2px;
@@ -76,9 +75,10 @@ html {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: none;
-    font-weight: bold;
-    border-bottom: 2px solid skyblue;
+    /* border: none; */
+    /* font-weight: bold; */
+    border: 2px solid skyblue;
+    /* border-bottom: 2px solid skyblue; */
     outline-width: 0;
 }
 
@@ -120,15 +120,15 @@ html {
 
 /*Dropdown List Exp Date*/
 select.list-dt {
-    border: none;
+    /* border: none; */
     outline: 0;
-    border-bottom: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 2px 5px 3px 5px;
     margin: 2px;
 }
 
 select.list-dt:focus {
-    border-bottom: 1px solid skyblue;
+    border: 2px solid skyblue;
 }
 
 /*The background card*/
@@ -161,7 +161,7 @@ select.list-dt:focus {
 
 #progressbar li {
     list-style-type: none;
-    font-size: 12px;
+    font-size: 13px;
     width: 25%;
     float: left;
     position: relative;
@@ -170,23 +170,23 @@ select.list-dt:focus {
 /*Icons in the ProgressBar*/
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f023";
+    content: "\f007";
 }
 
 #progressbar #classification:before {
     font-family: FontAwesome;
-    content: "\f007";
+    content: "\f01c";
 }
 
 #progressbar #contact:before {
     font-family: FontAwesome;
-    content: "\f09d";
+    content: "\f2b9";
 }
 
 
 #progressbar #address:before {
     font-family: FontAwesome;
-    content: "\f00c";
+    content: "\f2bb";
 }
 
 /* 
