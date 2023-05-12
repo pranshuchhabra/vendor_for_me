@@ -53,6 +53,8 @@ html {
     color: #110e0e;
 }
 
+
+
 #msform input,
 #msform textarea {
     /* padding: 0px 8px 4px 8px; */
@@ -69,6 +71,13 @@ html {
     font-size: 16px;
     letter-spacing: 1px;
 }
+
+#msform input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+
+}
+
 
 #msform input:focus,
 #msform textarea:focus {
@@ -153,6 +162,7 @@ select.list-dt:focus {
     margin-bottom: 30px;
     overflow: hidden;
     color: lightgrey;
+    margin-left: -1rem;
 }
 
 #progressbar .active {
@@ -165,6 +175,7 @@ select.list-dt:focus {
     width: 25%;
     float: left;
     position: relative;
+
 }
 
 /*Icons in the ProgressBar*/

@@ -53,6 +53,7 @@
                                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                                             <!-- <h2><strong>Sign Up Your User Account</strong></h2> -->
                                             <!-- <p>Fill all form field to go to next step</p> -->
+
                                             <div class="row">
                                                 <div class="col-md-12 mx-0">
                                                     <form id="msform">
@@ -69,8 +70,6 @@
                                                         <fieldset>
                                                             <div class="form-card">
                                                                 <h2 class="fs-title">Personal Information</h2>
-
-
 
 
                                                                 <div class="row">
@@ -169,76 +168,18 @@
                                                             <div class="form-card">
                                                                 <h2 class="fs-title">Contact Information</h2>
 
-                                                                <div id="input">
 
-                                                                    <label for="email">Email</label>
-                                                                    <input type="text" id="email" placeholder="" />
+                                                                <label for="email">Email</label>
+                                                                <input type="text" id="email" placeholder="" />
 
-                                                                    <label for="cont1">Contact</label>
-                                                                    <input type="text" id="cont1" placeholder="" />
+                                                                <label for="cont1">Contact</label>
+                                                                <input type="text" id="cont1" placeholder="" />
 
-                                                                    <div id="alternate-inputs"></div>
+                                                                <div id="alternate-inputs"></div>
 
-                                                                    <button type="button" id="add-btn">Add more</button>
+                                                                <button type="button" id="add-btn">Add more</button>
+                                                                <button type="button" id="rem-btn">Remove</button>
 
-
-
-
-                                                                </div>
-
-
-                                                                <!-- <div class="radio-group">
-                                                                <div class='radio' data-value="credit"><img
-                                                                        src="https://i.imgur.com/XzOzVHZ.jpg"
-                                                                        width="200px" height="100px"></div>
-                                                                <div class='radio' data-value="paypal"><img
-                                                                        src="https://i.imgur.com/jXjwZlj.jpg"
-                                                                        width="200px" height="100px"></div>
-                                                                <br>
-                                                                </div> -->
-
-
-
-
-
-                                                                <!-- <label class="pay">Card Holder Name*</label>
-                                                              <input type="text" name="holdername" placeholder="" />
-                                                              <div class="row">
-                                                                <div class="col-9">
-                                                                    <label class="pay">Card Number*</label>
-                                                                    <input type="text" name="cardno" placeholder="" />
-                                                                </div>
-                                                                <div class="col-3">
-                                                                    <label class="pay">CVC*</label>
-                                                                    <input type="password" name="cvcpwd"
-                                                                        placeholder="***" />
-                                                                </div>
-                                                              </div>
-                                                              <div class="row">
-                                                                <div class="col-3">
-                                                                    <label class="pay">Expiry Date*</label>
-                                                                </div>
-                                                                <div class="col-9">
-                                                                    <select class="list-dt" id="month" name="expmonth">
-                                                                        <option selected>Month</option>
-                                                                        <option>January</option>
-                                                                        <option>February</option>
-                                                                        <option>March</option>
-                                                                        <option>April</option>
-                                                                        <option>May</option>
-                                                                        <option>June</option>
-                                                                        <option>July</option>
-                                                                        <option>August</option>
-                                                                        <option>September</option>
-                                                                        <option>October</option>
-                                                                        <option>November</option>
-                                                                        <option>December</option>
-                                                                    </select>
-                                                                    <select class="list-dt" id="year" name="expyear">
-                                                                        <option selected>Year</option>
-                                                                    </select> 
-                                                                </div>
-                                                              </div>  -->
 
 
 
@@ -253,57 +194,77 @@
                                                             <div class="form-card">
                                                                 <h2 class="fs-title">Address</h2>
 
-                                                                <label for="stadd1">Street Address1</label>
-                                                                <input type="text" id="stadd1" placeholder="" />
+                                                                <div class="billing-address">
 
-                                                                <label for="stadd2">Street Address2</label>
-                                                                <input type="text" id="stadd2" placeholder="" />
 
-                                                                <label for="country">Country</label>
-                                                                <input type="text" id="country" placeholder="" />
+                                                                    <h6>Billing Address</h6>
 
-                                                                <label for="state">State</label>
-                                                                <input type="text" id="state" placeholder="" />
+                                                                    <div>
 
-                                                                <label for="city">City</label>
-                                                                <input type="text" id="city" placeholder="" />
+                                                                        <label for="billingadd1">Address1</label>
+                                                                        <input type="text" id="billingadd1" />
 
-                                                                <label for="pincode">Pincode</label>
-                                                                <input type="text" id="pincode" placeholder="" />
+
+                                                                        <label for="billingadd2">Address2</label>
+                                                                        <input type="text" id="billingadd2" />
 
 
 
+                                                                        <label for="billingcountry">Country</label>
+                                                                        <input type="text" id="billingcountry" />
+
+                                                                        <label for="billingstate">State</label>
+                                                                        <input type="text" id="billingstate" />
+
+                                                                        <label for="billingcity">City</label>
+                                                                        <input type="text" id="billingcity" />
+
+                                                                        <label for="billingpincode">Pincode</label>
+                                                                        <input type="text" id="billingpincode" />
 
 
-                                                                <input type="checkbox" id="sameAsBilling"
-                                                                    name="sameAsBilling">
-                                                                <label for="sameAsBilling">Billing address same as
-                                                                    shipping address</label>
+                                                                    </div>
+
+                                                                </div>
 
 
-                                                                <!-- <h2>Shipping address</h2> -->
-
-                                                                <label for="shippingName">Name:</label>
-                                                                <input type="text" id="shippingName"
-                                                                    name="shippingName"><br>
-
-                                                                <label for="shippingAddress">Address:</label>
-                                                                <input type="text" id="shippingAddress"
-                                                                    name="shippingAddress"><br>
-
-                                                                <label for="shippingCity">City:</label>
-                                                                <input type="text" id="shippingCity"
-                                                                    name="shippingCity"><br>
-
-                                                                <label for="shippingState">State:</label>
-                                                                <input type="text" id="shippingState"
-                                                                    name="shippingState"><br>
-
-                                                                <label for="shippingZip">Zip:</label>
-                                                                <input type="text" id="shippingZip"
-                                                                    name="shippingZip"><br>
+                                                                <input type="checkbox" style id="same-as-billing">
+                                                                <label for="same-as-billing">Billing address same
+                                                                    as shipping address</label>
 
 
+
+                                                                <div class="shipping-address">
+
+
+                                                                    <h6>Shipping address</h6>
+
+                                                                    <div>
+
+                                                                        <label for="shippingadd1">Address1</label>
+                                                                        <input type="text" id="shippingadd1">
+
+                                                                        <label for="shippingadd2">Address2</label>
+                                                                        <input type="text" id="shippingadd2">
+
+
+
+                                                                        <label for="shippingcountry">Country</label>
+                                                                        <input type="text" id="shippingcountry">
+
+                                                                        <label for="shippingstate">State</label>
+                                                                        <input type="text" id="shippingstate">
+
+                                                                        <label for="shippingcity">City</label>
+                                                                        <input type="text" id="shippingcity">
+
+
+                                                                        <label for="shippingpincode">Pincode</label>
+                                                                        <input type="text" id="shippingpincode">
+
+                                                                    </div>
+
+                                                                </div>
 
                                                                 <!-- <div class="row justify-content-center">
                                                                 <div class="col-3">
@@ -317,6 +278,8 @@
                                                                     <h5>You Have Successfully Signed Up</h5>
                                                                 </div>
                                                                  </div>  -->
+
+
                                                             </div>
                                                             <input type="button" name="previous"
                                                                 class="previous action-button-previous"
@@ -333,15 +296,20 @@
                             </div>
 
 
-
                         </div>
 
                         <%- include('includes/footer'); %>
-
                     </div>
             </div>
-
     </div>
+
+
+
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -407,37 +375,14 @@
 
 
 
-
-
-            $('.radio-group .radio').click(function () {
-                $(this).parent().find('.radio').removeClass('selected');
-                $(this).addClass('selected');
-            });
-
-            $(".submit").click(function () {
-                return false;
-            })
-
+            // $('.radio-group .radio').click(function () {
+            //     $(this).parent().find('.radio').removeClass('selected');
+            //     $(this).addClass('selected');
             // });
 
-
-
-
-
-            // var counter = 1;
-            // $("#add-btn").click(function () {
-
-            //     if (counter <= 2) {
-
-            //         $("#input").append('<div class="re_input"><label for="alt-email' + counter + '">Alternate-Email</label><input type="text" id="alt-email' + counter + '" placeholder="" /><label for="alt-contact' + counter + '">Alternate-Contact</label><input type="text" id="alt-contact' + counter + '" placeholder="" /><button type="button" class="inputRemove">Remove</button></div>');
-            //         counter++;
-            //     }
-            // });
-
-            // $('body').on('click', '.inputRemove', function () {
-
-            //     $(this).parent('div.re_input').remove();
-            //     counter--;
+            // $(".submit").click(function () {
+            //     return false;
+            // })
 
             // });
 
@@ -452,50 +397,41 @@
                         '<input type="text" id="alt-email' + count + '" placeholder="" />' +
                         '<label for="alt-contact' + count + '">Alternate-Contact</label>' +
                         '<input type="text" id="alt-contact' + count + '" placeholder="" />' +
-                        '<button type="button" class="inputRemove">Remove</button>' +
-                        '<br></br>' +
+                        // '<button type="button" class="inputRemove">-</button>' +
+
                         '</div>';
                     $("#alternate-inputs").append(newInput);
                     count++;
                 }
             });
 
-            $('body').on('click', '.inputRemove', function () {
+
+
+            $('#alternate-inputs').on('click', '#rem-btn', function () {
                 $(this).parent('.re_input').remove();
                 count--;
             });
-        });
 
 
 
-        const stadd1 = document.getElementById('stadd1');
-        const billingAddress = document.getElementById('billingAddress');
-        const billingCity = document.getElementById('billingCity');
-        const billingState = document.getElementById('billingState');
-        const billingZip = document.getElementById('billingZip');
 
-        const shippingName = document.getElementById('shippingName');
-        const shippingAddress = document.getElementById('shippingAddress');
-        const shippingCity = document.getElementById('shippingCity');
-        const shippingState = document.getElementById('shippingState');
-        const shippingZip = document.getElementById('shippingZip');
+            var billingAddressInputs = $('.billing-address input[type="text"]');
+            var shippingAddressInputs = $('.shipping-address input[type="text"]');
 
-        const sameAsBilling = document.getElementById('sameAsBilling');
+            $('#same-as-billing').on('change', function () {
+                if ($(this).is(':checked')) {
+                    shippingAddressInputs.val(function (index, value) {
+                        return billingAddressInputs.eq(index).val();
+                    });
+                    shippingAddressInputs.prop('readonly', true);
+                } else {
+                    shippingAddressInputs.val('');
+                    shippingAddressInputs.prop('readonly', false);
+                }
+            });
 
-        sameAsBilling.addEventListener('click', () => {
-            if (sameAsBilling.checked) {
-                shippingName.value = stadd1.value;
-                // shippingAddress.value = billingAddress.value;
-                // shippingCity.value = billingCity.value;
-                // shippingState.value = billingState.value;
-                // shippingZip.value = billingZip.value;
-            } else {
-                shippingName.value = '';
-                shippingAddress.value = '';
-                shippingCity.value = '';
-                shippingState.value = '';
-                shippingZip.value = '';
-            }
+
+
         });
 
 
