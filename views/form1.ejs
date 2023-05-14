@@ -75,11 +75,13 @@
                                                                 <div class="row">
                                                                     <div class="col-6">
                                                                         <label for="fname">First Name</label>
-                                                                        <input type="text" id="fname" placeholder="" />
+                                                                        <input type="text" id="fname" placeholder=""
+                                                                            class="default" />
                                                                     </div>
                                                                     <div class="col-6">
                                                                         <label for="lname">Last Name</label>
-                                                                        <input type="text" id="lname" placeholder="" />
+                                                                        <input type="text" id="lname" placeholder=""
+                                                                            class="default" />
                                                                     </div>
                                                                 </div>
 
@@ -115,7 +117,8 @@
                                                                 <br>
 
                                                                 <label for="coname">Company Name</label>
-                                                                <input type="text" id="coname" placeholder="" />
+                                                                <input type="text" id="coname" placeholder=""
+                                                                    class="default" />
 
 
 
@@ -170,15 +173,18 @@
 
 
                                                                 <label for="email">Email</label>
-                                                                <input type="text" id="email" placeholder="" />
+                                                                <input type="text" id="email" placeholder=""
+                                                                    class="default" />
 
                                                                 <label for="cont1">Contact</label>
-                                                                <input type="text" id="cont1" placeholder="" />
+                                                                <input type="text" id="cont1" placeholder=""
+                                                                    class="default" />
 
                                                                 <div id="alternate-inputs"></div>
 
-                                                                <button type="button" id="add-btn">Add more</button>
-                                                                <button type="button" id="rem-btn">Remove</button>
+                                                                <button type="button" id="add-btn">Add
+                                                                    more</button>
+                                                                <!-- <button type="button" id="rem-btn">Remove</button> -->
 
 
 
@@ -202,25 +208,31 @@
                                                                     <div>
 
                                                                         <label for="billingadd1">Address1</label>
-                                                                        <input type="text" id="billingadd1" />
+                                                                        <input type="text" id="billingadd1"
+                                                                            class="default" />
 
 
                                                                         <label for="billingadd2">Address2</label>
-                                                                        <input type="text" id="billingadd2" />
+                                                                        <input type="text" id="billingadd2"
+                                                                            class="default" />
 
 
 
                                                                         <label for="billingcountry">Country</label>
-                                                                        <input type="text" id="billingcountry" />
+                                                                        <input type="text" id="billingcountry"
+                                                                            class="default" />
 
                                                                         <label for="billingstate">State</label>
-                                                                        <input type="text" id="billingstate" />
+                                                                        <input type="text" id="billingstate"
+                                                                            class="default" />
 
                                                                         <label for="billingcity">City</label>
-                                                                        <input type="text" id="billingcity" />
+                                                                        <input type="text" id="billingcity"
+                                                                            class="default" />
 
                                                                         <label for="billingpincode">Pincode</label>
-                                                                        <input type="text" id="billingpincode" />
+                                                                        <input type="text" id="billingpincode"
+                                                                            class="default" />
 
 
                                                                     </div>
@@ -242,25 +254,31 @@
                                                                     <div>
 
                                                                         <label for="shippingadd1">Address1</label>
-                                                                        <input type="text" id="shippingadd1">
+                                                                        <input type="text" id="shippingadd1"
+                                                                            class="default">
 
                                                                         <label for="shippingadd2">Address2</label>
-                                                                        <input type="text" id="shippingadd2">
+                                                                        <input type="text" id="shippingadd2"
+                                                                            class="default">
 
 
 
                                                                         <label for="shippingcountry">Country</label>
-                                                                        <input type="text" id="shippingcountry">
+                                                                        <input type="text" id="shippingcountry"
+                                                                            class="default">
 
                                                                         <label for="shippingstate">State</label>
-                                                                        <input type="text" id="shippingstate">
+                                                                        <input type="text" id="shippingstate"
+                                                                            class="default">
 
                                                                         <label for="shippingcity">City</label>
-                                                                        <input type="text" id="shippingcity">
+                                                                        <input type="text" id="shippingcity"
+                                                                            class="default">
 
 
                                                                         <label for="shippingpincode">Pincode</label>
-                                                                        <input type="text" id="shippingpincode">
+                                                                        <input type="text" id="shippingpincode"
+                                                                            class="default">
 
                                                                     </div>
 
@@ -320,10 +338,40 @@
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
 
+
+            function validateFields(current_fs) {
+                var allInputs = current_fs.find(":input"); // get all input fields in the current fieldset
+                var isValid = true;
+                allInputs.each(function () {
+
+                    if ($(this).is('button')) { // if the current element is a button, skip to the next iteration
+                        return true;
+                    }
+
+
+                    if ($.trim($(this).val()) == "") {
+                        $(this).removeClass("default").addClass("error");
+                        isValid = false;
+                    }
+                    // else {
+                    //     $(this).removeClass("error").addClass("default"); 
+                    // }
+                });
+                return isValid;
+            }
+
+
             $(".next").click(function () {
 
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
+
+
+                if (!validateFields(current_fs)) {
+                    return false;
+
+                }
+
 
                 //add Class Active
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -394,10 +442,10 @@
                 if (count < 3) {
                     var newInput = '<div class="re_input">' +
                         '<label for="alt-email' + count + '">Alternate-Email</label>' +
-                        '<input type="text" id="alt-email' + count + '" placeholder="" />' +
+                        '<input type="text" id="alt-email' + count + '" placeholder=""class="default" />' +
                         '<label for="alt-contact' + count + '">Alternate-Contact</label>' +
-                        '<input type="text" id="alt-contact' + count + '" placeholder="" />' +
-                        // '<button type="button" class="inputRemove">-</button>' +
+                        '<input type="text" id="alt-contact' + count + '" placeholder=""class="default" />' +
+                        '<button type="button" class="inputRemove">x</button>' +
 
                         '</div>';
                     $("#alternate-inputs").append(newInput);
@@ -406,13 +454,10 @@
             });
 
 
-
-            $('#alternate-inputs').on('click', '#rem-btn', function () {
-                $(this).parent('.re_input').remove();
+            $("#alternate-inputs").on("click", ".inputRemove", function () {
+                $(this).parent().remove();
                 count--;
             });
-
-
 
 
             var billingAddressInputs = $('.billing-address input[type="text"]');
