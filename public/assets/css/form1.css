@@ -45,8 +45,9 @@ html {
 
 #msform fieldset .form-card {
     text-align: left;
-   
+
 }
+
 /* 
 
 #msform input,
@@ -259,4 +260,9 @@ select.list-dt:focus {
     border-radius: 50%;
     cursor: pointer;
     font-size: 13px;
+}
+
+
+.error {
+    border: 1px solid red;
 }

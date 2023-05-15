@@ -29,7 +29,7 @@
 
 
 
-    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/form1.css">
 </head>
 
@@ -77,7 +77,7 @@
                                                                     <label for="lename" class="form-label">Legal
                                                                         Name</label>
                                                                     <input type="text" id="lename" placeholder=""
-                                                                        class="form-control">
+                                                                        class="form-control" required>
                                                                 </div>
 
                                                                 <div class="mb-3">
@@ -113,8 +113,10 @@
 
                                                             </div>
 
-                                                            <input type="button" name="next" class="next action-button"
-                                                                value="Next" />
+
+                                                            <button type="button"
+                                                                class="next btn btn-outline-info">Next</button>
+
 
                                                         </fieldset>
 
@@ -128,48 +130,50 @@
                                                                         <label for="fname" class="form-label">First
                                                                             Name</label>
                                                                         <input type="text" id="fname" placeholder=""
-                                                                            class="form-control">
+                                                                            class="form-control" required>
                                                                     </div>
 
                                                                     <div class="mb-3">
                                                                         <label for="lname" class="form-label">Last
                                                                             Name</label>
                                                                         <input type="text" id="lname" placeholder=""
-                                                                            class="form-control">
+                                                                            class="form-control" required>
                                                                     </div>
 
                                                                     <div class="mb-3">
                                                                         <label for="email"
                                                                             class="form-label">Email</label>
                                                                         <input type="text" id="email" placeholder=""
-                                                                            class="form-control">
+                                                                            class="form-control" required>
                                                                     </div>
 
                                                                     <div class="mb-3">
                                                                         <label for="cont"
                                                                             class="form-label">Contact</label>
                                                                         <input type="text" id="cont" placeholder=""
-                                                                            class="form-control">
+                                                                            class="form-control" required>
                                                                     </div>
+
+
 
 
                                                                     <button type="button" id="add-btn"
                                                                         class="btn btn-info">Add</button>
 
+                                                                    <!-- <i class="remove-icon fa-light fa-heart"></i> -->
+
                                                                 </div>
-
-
 
                                                                 <!-- <div id="alternative-inputs"></div> -->
 
 
-
                                                             </div>
-                                                            <input type="button" name="previous"
-                                                                class="previous action-button-previous"
-                                                                value="Previous" />
-                                                            <input type="button" name="next" class="next action-button"
-                                                                value="Next" />
+                                                            <button type="button"
+                                                                class="previous btn btn-outline-secondary">Previous</button>
+
+                                                            <button type="button"
+                                                                class="next btn btn-outline-info">Next</button>
+
                                                         </fieldset>
                                                         <fieldset>
                                                             <div class="form-card">
@@ -282,11 +286,12 @@
 
 
                                                             </div>
-                                                            <input type="button" name="previous"
-                                                                class="previous action-button-previous"
-                                                                value="Previous" />
-                                                            <input type="button" name="Submit"
-                                                                class="next action-button" value="Submit" />
+                                                            <button type="button"
+                                                                class="previous btn btn-outline-secondary">Previous</button>
+
+                                                            <button type="button"
+                                                                class="next btn btn-outline-info">Next</button>
+
                                                         </fieldset>
                                                     </form>
                                                 </div>
@@ -345,6 +350,18 @@
 
 
             $(".next").click(function () {
+
+                // var emptyFields = $(this).parent().find("input[required]").filter(function () {
+                //     return $(this).val().trim() === "";
+                // });
+                var emptyFields = $(this).parent().find("input[required]:invalid");
+
+                if (emptyFields.length > 0) {
+                    emptyFields.addClass("error");
+                    return;
+                }
+
+
 
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
@@ -437,37 +454,36 @@
             //     count--;
             // });
 
-            var maxFields = 2;
+
+            var maxFields = 3;
             var fieldCount = 1;
 
             $('#add-btn').click(function () {
                 if (fieldCount < maxFields) {
                     var newFieldsHTML = `
-    <div class="contact-info">
-  <div class="mb-3">
-  <label for="fname" class="form-label">First Name</label>
- <input type="text" id="fname" placeholder="" class="form-control">
- </div>
+              <div class="contact-info">
+                <div class="mb-3">
+                  <label for="fname" class="form-label">First Name</label>
+                  <input type="text" id="fname" placeholder="" class="form-control">
+                </div>
 
+                <div class="mb-3">
+                  <label for="lname" class="form-label">Last Name</label>
+                  <input type="text" id="lname" placeholder="" class="form-control">
+                </div>
 
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" id="email" placeholder="" class="form-control">
+                </div>
 
-     <div class="mb-3">
-  <label for="lname" class="form-label">Last Name</label>
-  <input type="text" id="lname" placeholder="" class="form-control">
- </div>
-
-   <div class="mb-3">
-  <label for="email" class="form-label">Email</label>
-  <input type="text" id="email" placeholder="" class="form-control">
-  </div>
-
-   <div class="mb-3">
-  <label for="cont" class="form-label">Contact</label>
-   <input type="text" id="cont" placeholder="" class="form-control">
-   <i class="remove-icon fa fa-times"></i>
- </div>
-   </div>
-`;
+                <div class="mb-3">
+                  <label for="cont" class="form-label">Contact</label>
+                  <input type="text" id="cont" placeholder="" class="form-control">
+                  <i class="remove-icon fa-light fa-heart"></i>
+                </div>
+              </div>
+            `;
 
                     $('.contact-info').last().after(newFieldsHTML);
                     fieldCount++;
@@ -478,6 +494,7 @@
                 $(this).closest('.contact-info').remove();
                 fieldCount--;
             });
+
 
 
 

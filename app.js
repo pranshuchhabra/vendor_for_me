@@ -68,7 +68,7 @@ app.get('/view', (req, res) => {
 function authenticateUser(email, password) {
     const validUsers = [
         { email: 'paras', password: '123', role: 'executive' },
-        { email: 'pranshu', password: '456', role: 'manager' }
+        { email: 'Testuser@gmail.com', password: '456', role: 'manager' }
     ];
 
     const user = validUsers.find(u => u.email === email && u.password === password);
