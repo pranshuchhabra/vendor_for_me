@@ -51,141 +51,116 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-9 text-center p-0 mt-3 mb-2">
                                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                                            <!-- <h2><strong>Sign Up Your User Account</strong></h2> -->
-                                            <!-- <p>Fill all form field to go to next step</p> -->
+
 
                                             <div class="row">
                                                 <div class="col-md-12 mx-0">
                                                     <form id="msform">
                                                         <!-- progressbar -->
                                                         <ul id="progressbar">
-                                                            <li class="active" id="personal"><strong>Personal
+                                                            <li class="active" id="personal"><strong>Vendor
                                                                     Information</strong>
                                                             </li>
-                                                            <li id="classification"><strong>Classification</strong></li>
+                                                            <!-- <li id="classification"><strong>Classification</strong></li> -->
                                                             <li id="contact"><strong>Contact Information</strong></li>
                                                             <li id="address"><strong>Address</strong></li>
                                                         </ul>
+
                                                         <!-- fieldsets -->
+
                                                         <fieldset>
                                                             <div class="form-card">
-                                                                <h2 class="fs-title">Personal Information</h2>
+                                                                <h2 class="fs-title">Vendor Information</h2>
 
 
-                                                                <div class="row">
-                                                                    <div class="col-6">
-                                                                        <label for="fname">First Name</label>
-                                                                        <input type="text" id="fname" placeholder=""
-                                                                            class="default" />
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <label for="lname">Last Name</label>
-                                                                        <input type="text" id="lname" placeholder=""
-                                                                            class="default" />
-                                                                    </div>
+                                                                <div class="mb-3">
+                                                                    <label for="lename" class="form-label">Legal
+                                                                        Name</label>
+                                                                    <input type="text" id="lename" placeholder=""
+                                                                        class="form-control">
                                                                 </div>
 
-                                                                <div class="row">
-                                                                    <div class="col-2">
-                                                                        <label for="category">Category</label>
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <select class="list-dt">
-                                                                            <option selected>Select</option>
-                                                                            <option>Contract</option>
-                                                                            <option>Lease</option>
-                                                                            <option>Supplier</option>
-
-                                                                        </select>
-
-                                                                    </div>
-
-                                                                    <div class="col-2">
-                                                                        <label for="type">Type</label>
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <select class="list-dt">
-                                                                            <option selected>Select</option>
-                                                                            <option>Individual</option>
-                                                                            <option>Company</option>
-                                                                        </select>
-
-                                                                    </div>
-
+                                                                <div class="mb-3">
+                                                                    <label for="category"
+                                                                        class="form-label">Category</label>
+                                                                    <select class="form-select">
+                                                                        <option selected>Select</option>
+                                                                        <option>Contract</option>
+                                                                        <option>Lease</option>
+                                                                        <option>Supplier</option>
+                                                                    </select>
                                                                 </div>
 
-                                                                <br>
+                                                                <div class="mb-3">
+                                                                    <label for="subsidiary"
+                                                                        class="form-label">Subsidiary</label>
+                                                                    <select class="form-select">
+                                                                        <option selected>Select Subsidiary</option>
+                                                                        <option>India</option>
+                                                                        <option>USA</option>
+                                                                    </select>
+                                                                </div>
 
-                                                                <label for="coname">Company Name</label>
-                                                                <input type="text" id="coname" placeholder=""
-                                                                    class="default" />
-
-
+                                                                <div class="mb-3">
+                                                                    <label for="terms" class="form-label">Terms</label>
+                                                                    <select class="form-select">
+                                                                        <option selected>Select Terms</option>
+                                                                        <option>NET30</option>
+                                                                        <option>NET60</option>
+                                                                        <option>NET90</option>
+                                                                    </select>
+                                                                </div>
 
                                                             </div>
+
                                                             <input type="button" name="next" class="next action-button"
                                                                 value="Next" />
+
                                                         </fieldset>
-                                                        <fieldset>
-                                                            <div class="form-card">
-                                                                <h2 class="fs-title">Classification</h2>
 
-
-                                                                <div class="row">
-                                                                    <div class="col-2">
-                                                                        <label for="subsidiary">Subsidiary</label>
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <select class="list-dt">
-                                                                            <option selected>Select Subsidiary</option>
-                                                                            <option>India</option>
-                                                                            <option>USA</option>
-
-
-                                                                        </select>
-                                                                    </div>
-
-                                                                    <div class="col-2">
-                                                                        <label for="terms">Terms</label>
-
-                                                                    </div>
-                                                                    <div class="col-4">
-                                                                        <select class="list-dt">
-                                                                            <option selected>Select Terms</option>
-                                                                            <option>NET30</option>
-                                                                            <option>NET60</option>
-                                                                            <option>NET90</option>
-
-                                                                        </select>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                            <input type="button" name="previous"
-                                                                class="previous action-button-previous"
-                                                                value="Previous" />
-                                                            <input type="button" name="next" class="next action-button"
-                                                                value="Next" />
-                                                        </fieldset>
                                                         <fieldset>
                                                             <div class="form-card">
                                                                 <h2 class="fs-title">Contact Information</h2>
 
+                                                                <div class="contact-info">
 
-                                                                <label for="email">Email</label>
-                                                                <input type="text" id="email" placeholder=""
-                                                                    class="default" />
+                                                                    <div class="mb-3">
+                                                                        <label for="fname" class="form-label">First
+                                                                            Name</label>
+                                                                        <input type="text" id="fname" placeholder=""
+                                                                            class="form-control">
+                                                                    </div>
 
-                                                                <label for="cont1">Contact</label>
-                                                                <input type="text" id="cont1" placeholder=""
-                                                                    class="default" />
+                                                                    <div class="mb-3">
+                                                                        <label for="lname" class="form-label">Last
+                                                                            Name</label>
+                                                                        <input type="text" id="lname" placeholder=""
+                                                                            class="form-control">
+                                                                    </div>
 
-                                                                <div id="alternate-inputs"></div>
+                                                                    <div class="mb-3">
+                                                                        <label for="email"
+                                                                            class="form-label">Email</label>
+                                                                        <input type="text" id="email" placeholder=""
+                                                                            class="form-control">
+                                                                    </div>
 
-                                                                <button type="button" id="add-btn">Add
-                                                                    more</button>
-                                                                <!-- <button type="button" id="rem-btn">Remove</button> -->
+                                                                    <div class="mb-3">
+                                                                        <label for="cont"
+                                                                            class="form-label">Contact</label>
+                                                                        <input type="text" id="cont" placeholder=""
+                                                                            class="form-control">
+                                                                    </div>
 
+
+                                                                    <button type="button" id="add-btn"
+                                                                        class="btn btn-info">Add</button>
+
+                                                                </div>
+
+
+
+                                                                <!-- <div id="alternative-inputs"></div> -->
 
 
 
@@ -205,37 +180,48 @@
 
                                                                     <h6>Billing Address</h6>
 
-                                                                    <div>
-
+                                                                    <div class="mb-3">
                                                                         <label for="billingadd1">Address1</label>
                                                                         <input type="text" id="billingadd1"
-                                                                            class="default" />
-
-
-                                                                        <label for="billingadd2">Address2</label>
-                                                                        <input type="text" id="billingadd2"
-                                                                            class="default" />
-
-
-
-                                                                        <label for="billingcountry">Country</label>
-                                                                        <input type="text" id="billingcountry"
-                                                                            class="default" />
-
-                                                                        <label for="billingstate">State</label>
-                                                                        <input type="text" id="billingstate"
-                                                                            class="default" />
-
-                                                                        <label for="billingcity">City</label>
-                                                                        <input type="text" id="billingcity"
-                                                                            class="default" />
-
-                                                                        <label for="billingpincode">Pincode</label>
-                                                                        <input type="text" id="billingpincode"
-                                                                            class="default" />
+                                                                            class="form-control" />
 
 
                                                                     </div>
+
+                                                                    <div class="mb-3">
+                                                                        <label for="billingadd2">Address2</label>
+                                                                        <input type="text" id="billingadd2"
+                                                                            class="form-control" />
+                                                                    </div>
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="billingcountry">Country</label>
+                                                                        <input type="text" id="billingcountry"
+                                                                            class="form-control" />
+                                                                    </div>
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="billingstate">State</label>
+                                                                        <input type="text" id="billingstate"
+                                                                            class="form-control" />
+                                                                    </div>
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="billingcity">City</label>
+                                                                        <input type="text" id="billingcity"
+                                                                            class="form-control" />
+                                                                    </div>
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="billingpincode">Pincode</label>
+                                                                        <input type="text" id="billingpincode"
+                                                                            class="form-control" />
+                                                                    </div>
+
 
                                                                 </div>
 
@@ -251,51 +237,48 @@
 
                                                                     <h6>Shipping address</h6>
 
-                                                                    <div>
 
+                                                                    <div class="mb-3">
                                                                         <label for="shippingadd1">Address1</label>
                                                                         <input type="text" id="shippingadd1"
-                                                                            class="default">
-
-                                                                        <label for="shippingadd2">Address2</label>
-                                                                        <input type="text" id="shippingadd2"
-                                                                            class="default">
-
-
-
-                                                                        <label for="shippingcountry">Country</label>
-                                                                        <input type="text" id="shippingcountry"
-                                                                            class="default">
-
-                                                                        <label for="shippingstate">State</label>
-                                                                        <input type="text" id="shippingstate"
-                                                                            class="default">
-
-                                                                        <label for="shippingcity">City</label>
-                                                                        <input type="text" id="shippingcity"
-                                                                            class="default">
-
-
-                                                                        <label for="shippingpincode">Pincode</label>
-                                                                        <input type="text" id="shippingpincode"
-                                                                            class="default">
-
+                                                                            class="form-control">
                                                                     </div>
 
-                                                                </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="shippingadd2">Address2</label>
+                                                                        <input type="text" id="shippingadd2"
+                                                                            class="form-control">
+                                                                    </div>
 
-                                                                <!-- <div class="row justify-content-center">
-                                                                <div class="col-3">
-                                                                    <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
-                                                                        class="fit-image">
+
+                                                                    <div class="mb-3">
+                                                                        <label for="shippingcountry">Country</label>
+                                                                        <input type="text" id="shippingcountry"
+                                                                            class="form-control">
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <label for="shippingstate">State</label>
+                                                                        <input type="text" id="shippingstate"
+                                                                            class="form-control">
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <label for="shippingcity">City</label>
+                                                                        <input type="text" id="shippingcity"
+                                                                            class="form-control">
+                                                                    </div>
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="shippingpincode">Pincode</label>
+                                                                        <input type="text" id="shippingpincode"
+                                                                            class="form-control">
+                                                                    </div>
+
+
+
                                                                 </div>
-                                                               </div>
-                                                               <br><br>
-                                                              <div class="row justify-content-center">
-                                                                <div class="col-7 text-center">
-                                                                    <h5>You Have Successfully Signed Up</h5>
-                                                                </div>
-                                                                 </div>  -->
 
 
                                                             </div>
@@ -335,30 +318,30 @@
     <script>
         $(document).ready(function () {
 
-            var current_fs, next_fs, previous_fs; //fieldsets
+            var current_fs, next_fs, previous_fs;    //fieldsets
             var opacity;
 
 
-            function validateFields(current_fs) {
-                var allInputs = current_fs.find(":input"); // get all input fields in the current fieldset
-                var isValid = true;
-                allInputs.each(function () {
+            // function validateFields(current_fs) {
+            //     var allInputs = current_fs.find(":input"); // get all input fields in the current fieldset
+            //     var isValid = true;
+            //     allInputs.each(function () {
 
-                    if ($(this).is('button')) { // if the current element is a button, skip to the next iteration
-                        return true;
-                    }
+            //         if ($(this).is('button')) { // if the current element is a button, skip to the next iteration
+            //             return true;
+            //         }
 
 
-                    if ($.trim($(this).val()) == "") {
-                        $(this).removeClass("default").addClass("error");
-                        isValid = false;
-                    }
-                    // else {
-                    //     $(this).removeClass("error").addClass("default"); 
-                    // }
-                });
-                return isValid;
-            }
+            //         if ($.trim($(this).val()) == "") {
+            //             $(this).removeClass("default").addClass("error");
+            //             isValid = false;
+            //         }
+            //         // else {
+            //         //     $(this).removeClass("error").addClass("default"); 
+            //         // }
+            //     });
+            //     return isValid;
+            // }
 
 
             $(".next").click(function () {
@@ -367,10 +350,10 @@
                 next_fs = $(this).parent().next();
 
 
-                if (!validateFields(current_fs)) {
-                    return false;
+                // if (!validateFields(current_fs)) {
+                //     return false;
 
-                }
+                // }
 
 
                 //add Class Active
@@ -393,6 +376,8 @@
                     duration: 600
                 });
             });
+
+
 
             $(".previous").click(function () {
 
@@ -423,55 +408,110 @@
 
 
 
-            // $('.radio-group .radio').click(function () {
-            //     $(this).parent().find('.radio').removeClass('selected');
-            //     $(this).addClass('selected');
+            // var count = 1;
+
+            // $("#add-btn").click(function () {
+            //     if (count < 3) {
+            //         var newInput = '<div class="re_input">' +
+            //             '<label for="fname1' + count + '">First Name</label>' +
+            //             '<input type="text" id="fname1' + count + '" placeholder=""class="default" />' +
+            //             '<label for="lname1' + count + '">Last Name</label>' +
+            //             '<input type="text" id="lname1' + count + '" placeholder=""class="default" />' +
+
+            //             '<label for="alt-email' + count + '">Alternate-Email</label>' +
+            //             '<input type="text" id="alt-email' + count + '" placeholder=""class="default" />' +
+            //             '<label for="alt-contact' + count + '">Alternate-Contact</label>' +
+            //             '<input type="text" id="alt-contact' + count + '" placeholder=""class="default" />' +
+            //             '<button type="button" class="inputRemove">x</button>' +
+
+
+            //             '</div>';
+            //         $("#alternate-inputs").append(newInput);
+            //         count++;
+            //     }
             // });
 
-            // $(".submit").click(function () {
-            //     return false;
-            // })
 
+            // $("#alternate-inputs").on("click", ".inputRemove", function () {
+            //     $(this).parent().remove();
+            //     count--;
             // });
 
+            var maxFields = 2;
+            var fieldCount = 1;
+
+            $('#add-btn').click(function () {
+                if (fieldCount < maxFields) {
+                    var newFieldsHTML = `
+    <div class="contact-info">
+  <div class="mb-3">
+  <label for="fname" class="form-label">First Name</label>
+ <input type="text" id="fname" placeholder="" class="form-control">
+ </div>
 
 
-            var count = 1;
 
-            $("#add-btn").click(function () {
-                if (count < 3) {
-                    var newInput = '<div class="re_input">' +
-                        '<label for="alt-email' + count + '">Alternate-Email</label>' +
-                        '<input type="text" id="alt-email' + count + '" placeholder=""class="default" />' +
-                        '<label for="alt-contact' + count + '">Alternate-Contact</label>' +
-                        '<input type="text" id="alt-contact' + count + '" placeholder=""class="default" />' +
-                        '<button type="button" class="inputRemove">x</button>' +
+     <div class="mb-3">
+  <label for="lname" class="form-label">Last Name</label>
+  <input type="text" id="lname" placeholder="" class="form-control">
+ </div>
 
-                        '</div>';
-                    $("#alternate-inputs").append(newInput);
-                    count++;
+   <div class="mb-3">
+  <label for="email" class="form-label">Email</label>
+  <input type="text" id="email" placeholder="" class="form-control">
+  </div>
+
+   <div class="mb-3">
+  <label for="cont" class="form-label">Contact</label>
+   <input type="text" id="cont" placeholder="" class="form-control">
+   <i class="remove-icon fa fa-times"></i>
+ </div>
+   </div>
+`;
+
+                    $('.contact-info').last().after(newFieldsHTML);
+                    fieldCount++;
                 }
             });
 
-
-            $("#alternate-inputs").on("click", ".inputRemove", function () {
-                $(this).parent().remove();
-                count--;
+            $(document).on('click', '.remove-icon', function () {
+                $(this).closest('.contact-info').remove();
+                fieldCount--;
             });
 
 
-            var billingAddressInputs = $('.billing-address input[type="text"]');
-            var shippingAddressInputs = $('.shipping-address input[type="text"]');
 
-            $('#same-as-billing').on('change', function () {
-                if ($(this).is(':checked')) {
-                    shippingAddressInputs.val(function (index, value) {
-                        return billingAddressInputs.eq(index).val();
+
+
+            // var billingAddressInputs = $('.billing-address input[type="text"]');
+            // var shippingAddressInputs = $('.shipping-address input[type="text"]');
+
+            // $('#same-as-billing').on('change', function () {
+            //     if ($(this).is(':checked')) {
+            //         shippingAddressInputs.val(function (index, value) {
+            //             return billingAddressInputs.eq(index).val();
+            //         });
+            //         shippingAddressInputs.prop('readonly', true);
+            //     } else {
+            //         shippingAddressInputs.val('');
+            //         shippingAddressInputs.prop('readonly', false);
+            //     }
+            // });
+
+
+            $('#same-as-billing').change(function () {
+                var billingAddressInputs = $('.billing-address input[type="text"]');
+                var shippingAddressInputs = $('.shipping-address input[type="text"]');
+                if (this.checked) {
+
+                    shippingAddressInputs.each(function (index) {
+                        $(this).val(billingAddressInputs.eq(index).val());
                     });
-                    shippingAddressInputs.prop('readonly', true);
-                } else {
-                    shippingAddressInputs.val('');
-                    shippingAddressInputs.prop('readonly', false);
+                    shippingAddressInputs.prop('disabled', true);
+                }
+                else {
+                    shippingAddressInputs.val('').prop('disabled', false);
+
                 }
             });
 
@@ -487,9 +527,12 @@
 
 
 
+
+
+
+
+
     </script>
-
-
 
 
 
