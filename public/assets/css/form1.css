@@ -13,6 +13,10 @@ html {
     margin-top: 20px;
 }
 
+
+
+
+/* 
 #msform fieldset .form-card {
     background: white;
     border: 0 none;
@@ -26,8 +30,11 @@ html {
 
     position: relative;
 
-}
+} */
 
+
+
+/* 
 #msform fieldset {
     background: white;
     border: 0 none;
@@ -37,7 +44,10 @@ html {
     margin: 0;
     padding-bottom: 20px;
     position: relative;
-}
+}  
+
+
+*/
 
 #msform fieldset:not(:first-of-type) {
     display: none;
@@ -46,6 +56,14 @@ html {
 #msform fieldset .form-card {
     text-align: left;
 
+}
+
+
+.card {
+    z-index: 0;
+    /* border: none; */
+    /* border-radius: 0.5rem; */
+    position: relative;
 }
 
 /* 
@@ -99,6 +117,7 @@ html {
 } */
 
 
+/* 
 #msform .action-button {
     width: 100px;
     background: skyblue;
@@ -114,8 +133,10 @@ html {
 #msform .action-button:hover,
 #msform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
-}
+} */
 
+
+/* 
 #msform .action-button-previous {
     width: 100px;
     background: #616161;
@@ -131,7 +152,7 @@ html {
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
-}
+} */
 
 /* 
 select.list-dt {
@@ -146,12 +167,8 @@ select.list-dt:focus {
     border: 2px solid skyblue;
 } */
 
-.card {
-    z-index: 0;
-    border: none;
-    border-radius: 0.5rem;
-    position: relative;
-}
+
+
 
 .fs-title {
     font-size: 20px;
@@ -239,12 +256,12 @@ select.list-dt:focus {
     background: skyblue;
 }
 
-
+/* 
 
 .re_input {
     margin-bottom: 10px;
     position: relative;
-    /* padding-right: 20px; */
+ 
 }
 
 .inputRemove {
@@ -261,7 +278,7 @@ select.list-dt:focus {
     cursor: pointer;
     font-size: 13px;
 }
-
+ */
 
 .error {
     border: 1px solid red;

@@ -29,7 +29,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/css/form1.css">
 </head>
 
@@ -50,265 +50,278 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-9 text-center p-0 mt-3 mb-2">
-                                        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+
+                                        <div class="card border-0 rounded bg-light px-0 pt-4 pb-0 mt-3 mb-3">
+
+                                            <!-- <div class="row">
+                                                <div class="col-md-12 mx-0"> -->
+
+                                            <form id="msform">
+                                                <!-- progressbar -->
+                                                <ul id="progressbar">
+                                                    <li class="active" id="personal"><strong>Vendor
+                                                            Information</strong>
+                                                    </li>
+                                                    <li id="contact"><strong>Contact Information</strong>
+                                                    </li>
+                                                    <li id="address"><strong>Address</strong></li>
+                                                </ul>
+
+                                                <!-- fieldsets -->
+
+                                                <div class="card-body">
 
 
-                                            <div class="row">
-                                                <div class="col-md-12 mx-0">
-                                                    <form id="msform">
-                                                        <!-- progressbar -->
-                                                        <ul id="progressbar">
-                                                            <li class="active" id="personal"><strong>Vendor
-                                                                    Information</strong>
-                                                            </li>
-                                                            <!-- <li id="classification"><strong>Classification</strong></li> -->
-                                                            <li id="contact"><strong>Contact Information</strong></li>
-                                                            <li id="address"><strong>Address</strong></li>
-                                                        </ul>
+                                                    <fieldset
+                                                        class="border border-info rounded bg-light px-4 pb-4 pt-4">
+                                                        <div class="form-card">
+                                                            <h2 class="fs-title">Vendor Information</h2>
 
-                                                        <!-- fieldsets -->
 
-                                                        <fieldset>
-                                                            <div class="form-card">
-                                                                <h2 class="fs-title">Vendor Information</h2>
+                                                            <div class="mb-3">
+                                                                <label for="lename" class="form-label">Legal
+                                                                    Name</label>
+                                                                <input type="text" id="lename" placeholder=""
+                                                                    class="form-control" required>
+                                                            </div>
 
+                                                            <div class="mb-3">
+                                                                <label for="category"
+                                                                    class="form-label">Category</label>
+                                                                <select class="form-select">
+                                                                    <option selected>Select</option>
+                                                                    <option>Contract</option>
+                                                                    <option>Lease</option>
+                                                                    <option>Supplier</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="subsidiary"
+                                                                    class="form-label">Subsidiary</label>
+                                                                <select class="form-select">
+                                                                    <option selected>Select Subsidiary</option>
+                                                                    <option>India</option>
+                                                                    <option>USA</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="terms" class="form-label">Terms</label>
+                                                                <select class="form-select">
+                                                                    <option selected>Select Terms</option>
+                                                                    <option>NET30</option>
+                                                                    <option>NET60</option>
+                                                                    <option>NET90</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <button type="button"
+                                                            class="next btn btn-outline-info">Next</button>
+
+
+                                                    </fieldset>
+
+
+                                                    <fieldset
+                                                        class="border border-info rounded bg-light px-4 pb-4 pt-4">
+                                                        <div class="form-card">
+                                                            <h2 class="fs-title">Contact Information</h2>
+
+                                                            <div class="contact-info">
 
                                                                 <div class="mb-3">
-                                                                    <label for="lename" class="form-label">Legal
+                                                                    <label for="fname" class="form-label">First
                                                                         Name</label>
-                                                                    <input type="text" id="lename" placeholder=""
+                                                                    <input type="text" id="fname" placeholder=""
                                                                         class="form-control" required>
                                                                 </div>
 
                                                                 <div class="mb-3">
-                                                                    <label for="category"
-                                                                        class="form-label">Category</label>
-                                                                    <select class="form-select">
-                                                                        <option selected>Select</option>
-                                                                        <option>Contract</option>
-                                                                        <option>Lease</option>
-                                                                        <option>Supplier</option>
-                                                                    </select>
+                                                                    <label for="lname" class="form-label">Last
+                                                                        Name</label>
+                                                                    <input type="text" id="lname" placeholder=""
+                                                                        class="form-control" required>
                                                                 </div>
 
                                                                 <div class="mb-3">
-                                                                    <label for="subsidiary"
-                                                                        class="form-label">Subsidiary</label>
-                                                                    <select class="form-select">
-                                                                        <option selected>Select Subsidiary</option>
-                                                                        <option>India</option>
-                                                                        <option>USA</option>
-                                                                    </select>
+                                                                    <label for="email" class="form-label">Email</label>
+                                                                    <input type="text" id="email" placeholder=""
+                                                                        class="form-control" required>
                                                                 </div>
 
                                                                 <div class="mb-3">
-                                                                    <label for="terms" class="form-label">Terms</label>
-                                                                    <select class="form-select">
-                                                                        <option selected>Select Terms</option>
-                                                                        <option>NET30</option>
-                                                                        <option>NET60</option>
-                                                                        <option>NET90</option>
-                                                                    </select>
+                                                                    <label for="cont" class="form-label">Contact</label>
+                                                                    <input type="text" id="cont" placeholder=""
+                                                                        class="form-control" required>
                                                                 </div>
+
+
+
+
+                                                                <button type="button" id="add-btn"
+                                                                    class="btn btn-info">Add</button>
+
+                                                                <!-- <i class="remove-icon fa-light fa-heart"></i> -->
+
+                                                            </div>
+
+                                                            <!-- <div id="alternative-inputs"></div> -->
+
+
+                                                        </div>
+                                                        <button type="button"
+                                                            class="previous btn btn-outline-secondary">Previous</button>
+
+                                                        <button type="button"
+                                                            class="next btn btn-outline-info">Next</button>
+
+                                                    </fieldset>
+
+
+                                                    <fieldset
+                                                        class="border border-info rounded bg-light px-4 pb-4 pt-4">
+                                                        <div class="form-card">
+                                                            <h2 class="fs-title">Address</h2>
+
+                                                            <div class="billing-address">
+
+
+                                                                <h6>Billing Address</h6>
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingadd1">Address1</label>
+                                                                    <input type="text" id="billingadd1"
+                                                                        class="form-control" />
+
+
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingadd2">Address2</label>
+                                                                    <input type="text" id="billingadd2"
+                                                                        class="form-control" />
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingcountry">Country</label>
+                                                                    <input type="text" id="billingcountry"
+                                                                        class="form-control" />
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingstate">State</label>
+                                                                    <input type="text" id="billingstate"
+                                                                        class="form-control" />
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingcity">City</label>
+                                                                    <input type="text" id="billingcity"
+                                                                        class="form-control" />
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="billingpincode">Pincode</label>
+                                                                    <input type="text" id="billingpincode"
+                                                                        class="form-control" />
+                                                                </div>
+
 
                                                             </div>
 
 
-                                                            <button type="button"
-                                                                class="next btn btn-outline-info">Next</button>
-
-
-                                                        </fieldset>
-
-                                                        <fieldset>
-                                                            <div class="form-card">
-                                                                <h2 class="fs-title">Contact Information</h2>
-
-                                                                <div class="contact-info">
-
-                                                                    <div class="mb-3">
-                                                                        <label for="fname" class="form-label">First
-                                                                            Name</label>
-                                                                        <input type="text" id="fname" placeholder=""
-                                                                            class="form-control" required>
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="lname" class="form-label">Last
-                                                                            Name</label>
-                                                                        <input type="text" id="lname" placeholder=""
-                                                                            class="form-control" required>
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="email"
-                                                                            class="form-label">Email</label>
-                                                                        <input type="text" id="email" placeholder=""
-                                                                            class="form-control" required>
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="cont"
-                                                                            class="form-label">Contact</label>
-                                                                        <input type="text" id="cont" placeholder=""
-                                                                            class="form-control" required>
-                                                                    </div>
+                                                            <input type="checkbox" style id="same-as-billing">
+                                                            <label for="same-as-billing">Billing address same
+                                                                as shipping address</label>
 
 
 
+                                                            <div class="shipping-address">
 
-                                                                    <button type="button" id="add-btn"
-                                                                        class="btn btn-info">Add</button>
 
-                                                                    <!-- <i class="remove-icon fa-light fa-heart"></i> -->
+                                                                <h6>Shipping address</h6>
 
+
+                                                                <div class="mb-3">
+                                                                    <label for="shippingadd1">Address1</label>
+                                                                    <input type="text" id="shippingadd1"
+                                                                        class="form-control">
                                                                 </div>
 
-                                                                <!-- <div id="alternative-inputs"></div> -->
+                                                                <div class="mb-3">
+                                                                    <label for="shippingadd2">Address2</label>
+                                                                    <input type="text" id="shippingadd2"
+                                                                        class="form-control">
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="shippingcountry">Country</label>
+                                                                    <input type="text" id="shippingcountry"
+                                                                        class="form-control">
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="shippingstate">State</label>
+                                                                    <input type="text" id="shippingstate"
+                                                                        class="form-control">
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="shippingcity">City</label>
+                                                                    <input type="text" id="shippingcity"
+                                                                        class="form-control">
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <label for="shippingpincode">Pincode</label>
+                                                                    <input type="text" id="shippingpincode"
+                                                                        class="form-control">
+                                                                </div>
+
 
 
                                                             </div>
-                                                            <button type="button"
-                                                                class="previous btn btn-outline-secondary">Previous</button>
-
-                                                            <button type="button"
-                                                                class="next btn btn-outline-info">Next</button>
-
-                                                        </fieldset>
-                                                        <fieldset>
-                                                            <div class="form-card">
-                                                                <h2 class="fs-title">Address</h2>
-
-                                                                <div class="billing-address">
 
 
-                                                                    <h6>Billing Address</h6>
+                                                        </div>
+                                                        <button type="button"
+                                                            class="previous btn btn-outline-secondary">Previous</button>
 
-                                                                    <div class="mb-3">
-                                                                        <label for="billingadd1">Address1</label>
-                                                                        <input type="text" id="billingadd1"
-                                                                            class="form-control" />
+                                                        <button type="button"
+                                                            class="next btn btn-outline-info">Next</button>
 
+                                                    </fieldset>
 
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="billingadd2">Address2</label>
-                                                                        <input type="text" id="billingadd2"
-                                                                            class="form-control" />
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="billingcountry">Country</label>
-                                                                        <input type="text" id="billingcountry"
-                                                                            class="form-control" />
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="billingstate">State</label>
-                                                                        <input type="text" id="billingstate"
-                                                                            class="form-control" />
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="billingcity">City</label>
-                                                                        <input type="text" id="billingcity"
-                                                                            class="form-control" />
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="billingpincode">Pincode</label>
-                                                                        <input type="text" id="billingpincode"
-                                                                            class="form-control" />
-                                                                    </div>
-
-
-                                                                </div>
-
-
-                                                                <input type="checkbox" style id="same-as-billing">
-                                                                <label for="same-as-billing">Billing address same
-                                                                    as shipping address</label>
-
-
-
-                                                                <div class="shipping-address">
-
-
-                                                                    <h6>Shipping address</h6>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingadd1">Address1</label>
-                                                                        <input type="text" id="shippingadd1"
-                                                                            class="form-control">
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingadd2">Address2</label>
-                                                                        <input type="text" id="shippingadd2"
-                                                                            class="form-control">
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingcountry">Country</label>
-                                                                        <input type="text" id="shippingcountry"
-                                                                            class="form-control">
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingstate">State</label>
-                                                                        <input type="text" id="shippingstate"
-                                                                            class="form-control">
-                                                                    </div>
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingcity">City</label>
-                                                                        <input type="text" id="shippingcity"
-                                                                            class="form-control">
-                                                                    </div>
-
-
-                                                                    <div class="mb-3">
-                                                                        <label for="shippingpincode">Pincode</label>
-                                                                        <input type="text" id="shippingpincode"
-                                                                            class="form-control">
-                                                                    </div>
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-                                                            <button type="button"
-                                                                class="previous btn btn-outline-secondary">Previous</button>
-
-                                                            <button type="button"
-                                                                class="next btn btn-outline-info">Next</button>
-
-                                                        </fieldset>
-                                                    </form>
                                                 </div>
-                                            </div>
+
+                                            </form>
+
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <%- include('includes/footer'); %>
-                    </div>
-            </div>
-    </div>
 
+                    </div>
+
+
+            </div>
+
+
+    </div>
 
 
 
@@ -454,46 +467,6 @@
             //     count--;
             // });
 
-
-            var maxFields = 3;
-            var fieldCount = 1;
-
-            $('#add-btn').click(function () {
-                if (fieldCount < maxFields) {
-                    var newFieldsHTML = `
-              <div class="contact-info">
-                <div class="mb-3">
-                  <label for="fname" class="form-label">First Name</label>
-                  <input type="text" id="fname" placeholder="" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                  <label for="lname" class="form-label">Last Name</label>
-                  <input type="text" id="lname" placeholder="" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="text" id="email" placeholder="" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                  <label for="cont" class="form-label">Contact</label>
-                  <input type="text" id="cont" placeholder="" class="form-control">
-                  <i class="remove-icon fa-light fa-heart"></i>
-                </div>
-              </div>
-            `;
-
-                    $('.contact-info').last().after(newFieldsHTML);
-                    fieldCount++;
-                }
-            });
-
-            $(document).on('click', '.remove-icon', function () {
-                $(this).closest('.contact-info').remove();
-                fieldCount--;
-            });
 
 
 
